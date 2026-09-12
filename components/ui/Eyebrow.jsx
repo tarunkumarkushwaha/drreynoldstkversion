@@ -1,8 +1,8 @@
-export default function Eyebrow({ children }) {
+export default function Eyebrow({ children, align = "left" }) {
   return (
     <p
-      className={`   text-xs font-semibold tracking-widest2 text-sea-600
-       "text-center" 
+      className={`text-xs font-semibold uppercase tracking-widest text-teal-700 ${
+        align === "center" ? "text-center" : ""
       }`}
     >
       {children}
