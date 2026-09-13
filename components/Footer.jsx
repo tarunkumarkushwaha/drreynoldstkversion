@@ -1,23 +1,42 @@
 import Link from "next/link";
-import Container from "./ui/Container";
 import { siteInfo, footerNav, legalNav, team } from "@/lib/data";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-stone-200 bg-white pt-16">
-      <Container>
-        <p className="max-w-2xl text-base leading-relaxed text-stone-500 sm:text-lg">
-          We want getting started to feel simple. Come into our {siteInfo.city} office in person, or meet virtually
-          from anywhere in {siteInfo.state} — whichever works better for you.
-        </p>
+    <footer className="bg-white pt-16 text-[#4a5254]">
+      <div className="mx-auto max-w-7xl px-6 lg:px-12">
+        <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-12">
 
-        <div className="mt-14 grid grid-cols-2 gap-10 border-t border-stone-200 pt-12 sm:grid-cols-3 lg:grid-cols-4">
-          <div>
-            <h4 className="text-xs font-semibold uppercase tracking-widest text-stone-500">Navigate</h4>
-            <ul className="mt-4 space-y-2.5">
+          <div className="lg:col-span-5">
+            <Link
+              href="/"
+              className="font-(family-name:--font-cormorant) text-4xl font-normal text-[#2a2e2d] antialiased sm:text-5xl"
+            >
+              Conejo Valley
+              <span className="mt-1 block font-sans text-[16px] font-normal uppercase tracking-[0.4em] text-[#8aa3a8]">
+                Family Counseling
+              </span>
+            </Link>
+
+            <p className="mt-6 max-w-md text-[18px] w-[60%] leading-relaxed text-[#596366]">
+              We want to make getting started simple. You're welcome to come
+              into our office in {siteInfo.city} or schedule virtual
+              appointments from anywhere in {siteInfo.state}—whatever works best
+              for you.
+            </p>
+          </div>
+
+          <div className="lg:col-span-2">
+            <h4 className="text-sm font-semibold uppercase tracking-[0.2em] text-[#596366]">
+              Navigate
+            </h4>
+            <ul className="mt-4 space-y-1 text-[16px]">
               {footerNav.map((item) => (
                 <li key={item.href}>
-                  <Link href={item.href} className="text-sm text-stone-700 hover:text-teal-700">
+                  <Link
+                    href={item.href}
+                    className="text-[#596366] transition-colors hover:text-stone-900"
+                  >
                     {item.label}
                   </Link>
                 </li>
@@ -25,56 +44,76 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div className="col-span-2 sm:col-span-1">
-            <h4 className="text-xs font-semibold uppercase tracking-widest text-stone-500">Contact</h4>
-            <address className="mt-4 space-y-1 text-sm not-italic text-stone-700">
-              {siteInfo.address.map((line) => (
-                <p key={line}>{line}</p>
-              ))}
-              <p className="pt-2">
-                <a href={`mailto:${siteInfo.email}`} className="hover:text-teal-700">
-                  {siteInfo.email}
-                </a>
-              </p>
-              <p>
-                <a href={`tel:${siteInfo.phone.replace(/\D/g, "")}`} className="hover:text-teal-700">
-                  {siteInfo.phone}
-                </a>
-              </p>
-            </address>
-            <p className="mt-4 text-sm italic text-stone-500">{siteInfo.serviceAreas}</p>
-          </div>
-
-          <div className="col-span-2 sm:col-span-1 lg:col-span-2">
-            <h4 className="text-xs font-semibold uppercase tracking-widest text-stone-500">Our Team</h4>
-            <ul className="mt-4 grid grid-cols-2 gap-x-6 gap-y-2.5 sm:grid-cols-2">
+          <div className="lg:col-span-2">
+            <h4 className="text-sm font-semibold uppercase tracking-[0.2em] text-[#596366]">
+              Our Team
+            </h4>
+            <ul className="mt-4 space-y-1 text-[16px]">
               {team.map((person) => (
                 <li key={person.slug}>
-                  <Link href={`/${person.slug}`} className="text-sm text-stone-700 hover:text-teal-700">
+                  <Link
+                    href={`/${person.slug}`}
+                    className="text-[#596366] transition-colors hover:text-stone-900"
+                  >
                     {person.name}
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
-        </div>
 
-        <div className="mt-12 flex flex-col items-center gap-4 border-t border-stone-200 py-8 text-xs text-stone-500 sm:flex-row sm:justify-between">
-          <p>
-            © {new Date().getFullYear()} {siteInfo.name}
-          </p>
-          <div className="flex flex-wrap items-center justify-center gap-x-2 gap-y-1">
+          <div className="lg:col-span-3">
+            <h4 className="text-sm font-semibold uppercase tracking-[0.2em] text-[#596366]">
+              Contact
+            </h4>
+            <address className="mt-4 space-y-1.5 text-[16px] not-italic text-[#596366]">
+              {siteInfo.address.map((line) => (
+                <p key={line}>{line}</p>
+              ))}
+              <p className="pt-2">
+                <a
+                  href={`mailto:${siteInfo.email}`}
+                  className="transition-colors hover:text-stone-900"
+                >
+                  {siteInfo.email}
+                </a>
+              </p>
+              <p>
+                <a
+                  href={`tel:${siteInfo.phone.replace(/\D/g, "")}`}
+                  className="transition-colors hover:text-stone-900"
+                >
+                  {siteInfo.phone}
+                </a>
+              </p>
+            </address>
+            <p className="mt-6 text-[16px] italic text-[#596366]">
+              {siteInfo.serviceAreas}
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div className="mt-16 bg-[#86b3b3] py-2 text-[16px] text-white">
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-6 sm:flex-row lg:px-12">
+          <div className="flex flex-wrap items-center justify-center gap-x-2">
             {legalNav.map((item, i) => (
               <span key={item.href} className="flex items-center gap-2">
-                <Link href={item.href} className="hover:text-teal-700">
+                <Link href={item.href} className="hover:underline">
                   {item.label}
                 </Link>
                 {i < legalNav.length - 1 && <span>|</span>}
               </span>
             ))}
+            {legalNav.length > 0 && <span>|</span>}
+            <span>Website by Walker Strategy Co.</span>
           </div>
+
+          <p className="text-white/90">
+            © {new Date().getFullYear()} {siteInfo.name}
+          </p>
         </div>
-      </Container>
+      </div>
     </footer>
   );
 }

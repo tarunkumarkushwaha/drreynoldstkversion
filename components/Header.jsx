@@ -6,20 +6,30 @@ import Container from "./ui/Container";
 import { team, specialtiesNav, methodsNav } from "@/lib/data";
 
 const navLinkClass =
-  "text-sm font-medium text-stone-700 transition-colors hover:text-teal-700";
+  "font-sans text-xs font-normal uppercase tracking-[0.22em] text-stone-700 transition-colors hover:text-teal-700";
+const navLinkClassMOBILE =
+  "font-sans text-3xl ml-5 font-normal uppercase tracking-[0.22em] text-stone-700 transition-colors hover:text-teal-700";
 
 function DesktopDropdown({ label, isOpen, onEnter, onLeave, children }) {
   return (
     <div className="relative" onMouseEnter={onEnter} onMouseLeave={onLeave}>
-      <button className={`${navLinkClass} flex items-center gap-1`} aria-expanded={isOpen}>
+      <button
+        className={`${navLinkClass} flex items-center gap-1`}
+        aria-expanded={isOpen}
+      >
         {label}
-        <svg
+        {/* <svg
           className={`h-3 w-3 transition-transform ${isOpen ? "rotate-180" : ""}`}
           viewBox="0 0 12 8"
           fill="none"
         >
-          <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-        </svg>
+          <path
+            d="M1 1.5L6 6.5L11 1.5"
+            stroke="currentColor"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+          />
+        </svg> */}
       </button>
       {isOpen && (
         <div className="absolute left-1/2 top-full z-40 w-64 -translate-x-1/2 pt-4">
@@ -32,44 +42,30 @@ function DesktopDropdown({ label, isOpen, onEnter, onLeave, children }) {
   );
 }
 
-function MobileAccordion({ label, isOpen, onToggle, children }) {
-  return (
-    <div className="border-b border-stone-200 py-1">
-      <button
-        className="flex w-full items-center justify-between py-3 text-base font-medium text-stone-800"
-        onClick={onToggle}
-        aria-expanded={isOpen}
-      >
-        {label}
-        <svg
-          className={`h-3 w-3 transition-transform ${isOpen ? "rotate-180" : ""}`}
-          viewBox="0 0 12 8"
-          fill="none"
-        >
-          <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-        </svg>
-      </button>
-      {isOpen && <div className="pb-3 pl-2">{children}</div>}
-    </div>
-  );
-}
-
 export default function Header() {
   const [openDropdown, setOpenDropdown] = useState(null);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [mobileSection, setMobileSection] = useState(null);
+  const [activeSubMenu, setActiveSubMenu] = useState(null); // 'team' | 'specialties' | 'methods' | null
+
+  const handleCloseMobile = () => {
+    setMobileOpen(false);
+    setActiveSubMenu(null);
+  };
 
   return (
-    <header className="sticky top-0 z-50 border-b border-stone-200 bg-white/90 backdrop-blur">
-      <Container className="flex h-20 items-center justify-between sm:h-24">
-        <Link href="/" className="font-serif text-lg font-medium text-stone-900 sm:text-xl">
+    <header className="pb-10 z-50 border-stone-200 bg-[#f7f6f2] backdrop-blur">
+      <Container className="flex h-20 py-20 px-10 sm:py-5 items-center justify-between sm:h-28">
+        <Link
+          href="/"
+          className="font-(family-name:--font-cormorant) text-4xl font-normal text-[#2d3130] antialiased sm:text-[42px]"
+          onClick={handleCloseMobile}
+        >
           Conejo Valley
-          <span className="block text-xs font-sans font-semibold uppercase tracking-widest text-teal-700">
+          <span className="block font-sans text-sm font-normal uppercase tracking-[0.28em] text-[#86a7a7] sm:mt-1 sm:text-xs sm:tracking-[0.56em]">
             Family Counseling
           </span>
         </Link>
 
-        {/* Desktop nav */}
         <nav className="hidden items-center gap-8 lg:flex">
           <Link href="/about" className={navLinkClass}>
             About
@@ -134,95 +130,154 @@ export default function Header() {
           </Link>
           <Link
             href="/contact"
-            className="inline-flex items-center justify-center rounded-full bg-teal-700 px-6 py-2.5 text-xs font-semibold text-white transition-colors hover:bg-teal-800"
+            className="inline-flex items-center justify-center rounded-[50%] border border-stone-700 bg-white px-6 py-4 font-sans text-xs font-normal uppercase tracking-[0.22em] text-stone-700 transition-colors hover:bg-black hover:text-stone-100"
           >
             Contact
           </Link>
         </nav>
 
-        {/* Mobile toggle */}
         <button
-          className="flex h-10 w-10 flex-col items-center justify-center gap-1.5 lg:hidden"
+          className="flex h-10 w-10 flex-col items-center cursor-pointer justify-center gap-1.5 lg:hidden"
           aria-label="Toggle menu"
           aria-expanded={mobileOpen}
-          onClick={() => setMobileOpen((v) => !v)}
+          onClick={() => {
+            setMobileOpen((v) => !v);
+            setActiveSubMenu(null);
+          }}
         >
-          <span className={`h-px w-6 bg-stone-900 transition-transform ${mobileOpen ? "translate-y-2 rotate-45" : ""}`} />
-          <span className={`h-px w-6 bg-stone-900 transition-opacity ${mobileOpen ? "opacity-0" : "opacity-100"}`} />
-          <span className={`h-px w-6 bg-stone-900 transition-transform ${mobileOpen ? "-translate-y-2 -rotate-45" : ""}`} />
+          <span
+            className={`h-px w-6 bg-stone-900 transition-transform ${mobileOpen ? "translate-y-2 rotate-45" : ""}`}
+          />
+          <span
+            className={`h-px w-6 bg-stone-900 transition-opacity ${mobileOpen ? "opacity-0" : "opacity-100"}`}
+          />
+          <span
+            className={`h-px w-6 bg-stone-900 transition-transform ${mobileOpen ? "-translate-y-2 -rotate-45" : ""}`}
+          />
         </button>
       </Container>
 
-      {/* Mobile menu */}
       {mobileOpen && (
-        <div className="max-h-[calc(100vh-5rem)] overflow-y-auto border-t border-stone-200 bg-white lg:hidden">
-          <Container className="flex flex-col gap-1 py-6">
-            <Link href="/about" className="py-3 text-base font-medium text-stone-900" onClick={() => setMobileOpen(false)}>
-              About
-            </Link>
+        <div className="relative h-[calc(100vh-5rem)] overflow-hidden border-t border-stone-200 bg-[#f7f6f2] lg:hidden">
+ 
+          <div
+            className={`absolute inset-0 flex flex-col justify-between overflow-y-auto p-6 transition-transform duration-300 ease-in-out ${
+              activeSubMenu ? "-translate-x-full" : "translate-x-0"
+            }`}
+          >
+            <div className="flex flex-col space-y-6">
+              <Link
+                href="/about"
+                className={`${navLinkClassMOBILE} cursor-pointer text-left`}
+                onClick={handleCloseMobile}
+              >
+                About
+              </Link>
 
-            <MobileAccordion
-              label="Our Team"
-              isOpen={mobileSection === "team"}
-              onToggle={() => setMobileSection(mobileSection === "team" ? null : "team")}
-            >
-              {team.map((person) => (
-                <Link
-                  key={person.slug}
-                  href={`/${person.slug}`}
-                  className="block py-2 text-sm text-stone-600"
-                  onClick={() => setMobileOpen(false)}
-                >
-                  {person.name}, {person.title}
-                </Link>
-              ))}
-            </MobileAccordion>
+              <button
+                className={`${navLinkClassMOBILE} flex items-center cursor-pointer text-left`}
+                onClick={() => setActiveSubMenu("team")}
+              >
+                <span>Our Team</span>
+                <span className="text-stone-400 ml-5 mb-2 text-5xl">›</span>
+              </button>
 
-            <MobileAccordion
-              label="Specialties"
-              isOpen={mobileSection === "specialties"}
-              onToggle={() => setMobileSection(mobileSection === "specialties" ? null : "specialties")}
-            >
-              {specialtiesNav.map((item) => (
-                <Link
-                  key={item.slug}
-                  href={`/${item.slug}`}
-                  className="block py-2 text-sm text-stone-600"
-                  onClick={() => setMobileOpen(false)}
-                >
-                  {item.label}
-                </Link>
-              ))}
-            </MobileAccordion>
+              <button
+                className={`${navLinkClassMOBILE} flex items-center cursor-pointer text-left`}
+                onClick={() => setActiveSubMenu("specialties")}
+              >
+                <span>Specialties</span>
+                <span className="text-stone-400 ml-5 mb-2 text-5xl">›</span>
+              </button>
 
-            <MobileAccordion
-              label="Methods"
-              isOpen={mobileSection === "methods"}
-              onToggle={() => setMobileSection(mobileSection === "methods" ? null : "methods")}
-            >
-              {methodsNav.map((item) => (
-                <Link
-                  key={item.slug}
-                  href={`/${item.slug}`}
-                  className="block py-2 text-sm text-stone-600"
-                  onClick={() => setMobileOpen(false)}
-                >
-                  {item.label}
-                </Link>
-              ))}
-            </MobileAccordion>
+              <button
+                className={`${navLinkClassMOBILE} flex items-center cursor-pointer text-left`}
+                onClick={() => setActiveSubMenu("methods")}
+              >
+                <span>Methods</span>
+                <span className="text-stone-400 ml-5 mb-2 text-5xl">›</span>
+              </button>
 
-            <Link href="/faqs" className="py-3 text-base font-medium text-stone-900" onClick={() => setMobileOpen(false)}>
-              FAQs
-            </Link>
-            <Link
-              href="/contact"
-              className="mt-4 inline-flex w-full items-center justify-center rounded-full bg-teal-700 px-7 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-teal-800"
-              onClick={() => setMobileOpen(false)}
+              <Link
+                href="/faqs"
+                className={`${navLinkClassMOBILE} cursor-pointer text-left`}
+                onClick={handleCloseMobile}
+              >
+                FAQs
+              </Link>
+            </div>
+
+            <div className="pt-8 pb-4">
+              <Link
+                href="/contact"
+                className="inline-flex w-[40%] items-center cursor-pointer justify-center rounded-[50%] border border-stone-700 bg-white py-3.5 font-sans text-xs font-normal uppercase tracking-[0.22em] text-stone-700 transition-colors hover:bg-black hover:text-white"
+                onClick={handleCloseMobile}
+              >
+                Contact
+              </Link>
+            </div>
+          </div>
+
+          <div
+            className={`absolute inset-0 overflow-y-auto bg-[#f7f6f2] p-6 transition-transform duration-300 ease-in-out ${
+              activeSubMenu ? "translate-x-0" : "translate-x-full"
+            }`}
+          >
+            <button
+              onClick={() => setActiveSubMenu(null)}
+              className="flex items-center cursor-pointer gap-2 font-sans text-base font-light uppercase tracking-[0.15em] text-[#86a7a7] hover:text-stone-900"
             >
-              Contact
-            </Link>
-          </Container>
+              <svg
+                className="h-4 w-4"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth="1.5"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+              </svg>
+              BACK
+            </button>
+
+            <div className="mt-8 space-y-6">
+              {activeSubMenu === "team" &&
+                team.map((person) => (
+                  <Link
+                    key={person.slug}
+                    href={`/${person.slug}`}
+                    className="block font-sans text-base font-normal uppercase tracking-[0.12em] text-[#2d3130] transition-colors hover:text-teal-700 sm:text-lg"
+                    onClick={handleCloseMobile}
+                  >
+                    {person.name}, {person.title}
+                  </Link>
+                ))}
+
+              {activeSubMenu === "specialties" &&
+                specialtiesNav.map((item) => (
+                  <Link
+                    key={item.slug}
+                    href={`/${item.slug}`}
+                    className="block font-sans text-base font-normal uppercase tracking-[0.12em] text-[#2d3130] transition-colors hover:text-teal-700 sm:text-lg"
+                    onClick={handleCloseMobile}
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+
+              {activeSubMenu === "methods" &&
+                methodsNav.map((item) => (
+                  <Link
+                    key={item.slug}
+                    href={`/${item.slug}`}
+                    className="block font-sans text-base font-normal uppercase tracking-[0.12em] text-[#2d3130] transition-colors hover:text-teal-700 sm:text-lg"
+                    onClick={handleCloseMobile}
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+            </div>
+          </div>
+
         </div>
       )}
     </header>
