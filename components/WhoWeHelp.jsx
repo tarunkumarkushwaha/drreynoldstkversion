@@ -3,37 +3,48 @@ import Link from "next/link";
 import Container from "./ui/Container";
 import { whoWeHelp } from "@/lib/data";
 
+const whoWeHelpData = whoWeHelp;
+
 export default function WhoWeHelp() {
   return (
-    <section className="bg-stone-100 py-16 sm:py-20 lg:py-28">
-      <Container>
-        <h2 className="text-center font-serif text-3xl text-stone-900 sm:text-4xl">
-          Who we <em className="italic text-teal-700">help</em>
-        </h2>
-
-        <div className="mt-14 grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8">
-          {whoWeHelp.map((item) => (
+    <section className="bg-[#f7f6f2] py-12 sm:py-16 lg:py-24">
+      <h2 className="text-left ml-10 md:ml-16 font-(family-name:--font-cormorant) text-4xl font-normal text-[#2d3130] sm:text-5xl lg:text-[56px]">
+        Who we{" "}
+        <span className="inline-block tracking-widest font-(family-name:--font-kristi) text-5xl font-normal leading-none text-[#7c9d96] sm:text-6xl lg:text-[70px]">
+          help
+        </span>
+      </h2>
+      <Container className="max-w-7xl px-6 sm:px-12 lg:px-16 xl:px-24">
+        <div className="mt-10 ml-1 md:ml-20 grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8 xl:gap-12">
+          {whoWeHelpData.map((item) => (
             <article key={item.title} className="flex flex-col">
-              <div className="relative aspect-[5/4] w-full overflow-hidden rounded-3xl">
+              <div className="relative aspect-square w-full overflow-hidden bg-stone-200">
                 <Image
                   src={item.img}
                   alt={item.title}
                   fill
-                  sizes="(min-width:1024px) 30vw, (min-width:640px) 45vw, 90vw"
-                  className="object-cover"
+                  sizes="(min-width: 1024px) 30vw, (min-width: 640px) 45vw, 100vw"
+                  className="object-cover object-center"
                   unoptimized
                 />
               </div>
-              <h3 className="mt-6 text-xl font-medium text-stone-900">
+
+              <h3 className="mt-6 font-(family-name:--font-cormorant) text-[24px] font-normal text-[#2d3130] sm:text-[28px]">
                 {item.href ? (
-                  <Link href={item.href} className="underline decoration-teal-300 decoration-2 underline-offset-4 hover:text-teal-700">
+                  <Link
+                    href={item.href}
+                    className="hover:opacity-80 transition-opacity"
+                  >
                     {item.title}
                   </Link>
                 ) : (
                   item.title
                 )}
               </h3>
-              <p className="mt-3 text-sm leading-relaxed text-stone-500 sm:text-base">{item.copy}</p>
+
+              <p className="mt-3 text-[13px] font-normal leading-[1.7] text-[#595e5c] sm:text-[16px]">
+                {item.copy}
+              </p>
             </article>
           ))}
         </div>
