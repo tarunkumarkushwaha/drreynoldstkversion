@@ -30,7 +30,7 @@ export default function Specialties() {
             ))}
           </div>
 
-          <div className="relative aspect-[4/5] w-full overflow-hidden rounded-3xl lg:aspect-auto">
+          <div className="relative aspect-4/5 w-full overflow-hidden rounded-3xl lg:aspect-auto">
             <Image
               src="https://picsum.photos/seed/cvfc-specialties/700/900"
               alt="Person walking along the shoreline"

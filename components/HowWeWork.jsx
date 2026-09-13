@@ -1,65 +1,91 @@
 import Image from "next/image";
-import Link from "next/link";
 import Container from "./ui/Container";
 import Eyebrow from "./ui/Eyebrow";
+import Link from "next/link";
 
 export default function HowWeWork() {
   return (
-    <section className="bg-teal-900 py-16 text-white sm:py-20 lg:py-28">
+    <section className="bg-[#D8CFBF] py-16 sm:py-20 lg:py-28 overflow-hidden">
       <Container>
-        <Eyebrow>
-          <span className="text-teal-300">How we work</span>
-        </Eyebrow>
-        <h2 className="mt-3 max-w-2xl font-serif text-3xl text-white sm:text-4xl">
-          We&rsquo;re here to make a real difference.
-        </h2>
+        <div className="max-w-[1180px] mx-auto">
+          <Eyebrow>
+            <span className="uppercase tracking-[0.28em] text-[14px] text-black/55">
+              How We Work
+            </span>
+          </Eyebrow>
 
-        <div className="mt-12 grid grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-16">
-          <div className="relative aspect-[4/5] w-full overflow-hidden rounded-3xl">
+          <h2 className="font-[family-name:var(--font-cormorant)] mt-6 lg:mt-20 text-3xl font-normal text-[#2d3130] sm:text-4xl lg:text-[42px]">
+            We’re here to make a difference.
+          </h2>
+
+          {/* Mobile Image */}
+          <div className="relative mt-8 aspect-[5/4] w-full overflow-hidden lg:hidden">
             <Image
-              src="https://picsum.photos/seed/cvfc-howwework/700/860"
-              alt="Two people walking together on a sunset beach"
+              src="https://picsum.photos/seed/cvfc-hero-1/800/1000"
+              alt="Family holding hands on the beach at sunset"
               fill
-              sizes="(min-width:1024px) 40vw, 90vw"
+              sizes="100vw"
               className="object-cover"
               unoptimized
+              loading="eager"
             />
           </div>
 
-          <div>
-            <p className="font-serif text-xl italic text-teal-100 sm:text-2xl">
-              The people we work with are usually juggling so much at once that putting themselves first is the
-              hardest part.
-            </p>
-            <p className="mt-6 text-base leading-relaxed text-white/80">
-              Here, your needs come first. Our team takes time to really listen, because no two people carry the same
-              story, and a one-size-fits-all approach was never going to work. If you&rsquo;re ready to put in the
-              work, we&rsquo;re ready to stand beside you.
-            </p>
-            <p className="mt-4 text-base leading-relaxed text-white/80">
-              Some sessions gently challenge you to see things from a new angle; others make space to simply sit with
-              what you&rsquo;re feeling. Either way, we take the process seriously, because healing, building a
-              fulfilling life, and forming meaningful relationships matter. We&rsquo;re here to walk alongside you as
-              you find your strengths and step into what comes next.
-            </p>
-            <Link
-              href="/about"
-              className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-white underline decoration-teal-300 decoration-2 underline-offset-4"
-            >
-              Learn more about us
-            </Link>
-          </div>
-        </div>
+          <div className="mt-8 lg:mt-10 grid grid-cols-1 lg:grid-cols-20 items-start gap-y-8">
+            <div className="lg:col-span-13 lg:pr-12">
+              <div className="grid gap-6 lg:gap-8 lg:grid-cols-2">
+                <div>
+                  <h3 className="text-[11px] lg:text-[14px] font-medium uppercase tracking-[0.2em] lg:tracking-[0.22em] leading-5 text-[#2B2B2B]">
+                    The clients we work with are balancing so many things at
+                    once. It’s often hard for them to put themselves first.
+                  </h3>
 
-        <div className="relative mt-14 aspect-[16/9] w-full overflow-hidden rounded-3xl sm:aspect-[21/8]">
-          <Image
-            src="https://picsum.photos/seed/cvfc-family-sunset/1600/650"
-            alt="Family holding hands on the beach at sunset"
-            fill
-            sizes="100vw"
-            className="object-cover"
-            unoptimized
-          />
+                  <p className="mt-6 text-[14px] lg:text-[18px] leading-7 text-black/70">
+                    Here, your needs are always top priority. Our team takes the
+                    time to deeply listen to our clients in order to truly
+                    understand their story and their struggles. We recognize
+                    that no two people are the same and that personalized
+                    therapy means an intentional, tailored approach.
+                  </p>
+                </div>
+
+                <div>
+                  <p className="text-[14px] lg:text-[18px] leading-7 text-black/70">
+                    Sometimes we may gently challenge you to look at things
+                    differently and other times we may explore your emotions,
+                    all while encouraging you to practice what you've learned in
+                    your daily life. We take what we do seriously because
+                    healing, meaningful relationships, and a fulfilling life all
+                    matter.
+                  </p>
+                </div>
+              </div>
+
+              <div className="mt-10 pb-4 ">
+                <Link
+                  href="/"
+                  className="inline-block border-b border-[#2d3130] font-sans text-[11px] font-normal uppercase tracking-[0.25em] text-[#2d3130] transition-opacity hover:opacity-75"
+                >
+                  Learn More About Us
+                </Link>
+              </div>
+
+              
+            </div>
+
+            <div className="hidden lg:block lg:col-span-7 relative h-[560px]">
+              <div className="absolute -right-28 top-0 w-[430px] h-[560px] overflow-hidden">
+                <Image
+                  src="https://picsum.photos/seed/cvfc-hero-1/800/1000"
+                  alt="Family holding hands on the beach at sunset"
+                  fill
+                  className="object-cover"
+                  unoptimized
+                  sizes="430px"
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </Container>
     </section>
