@@ -7,19 +7,18 @@ export default function HowWeWork() {
   return (
     <section className="bg-[#D8CFBF] py-16 sm:py-20 lg:py-28 overflow-hidden">
       <Container>
-        <div className="max-w-[1180px] mx-auto">
+        <div className="max-w-295 mx-auto">
           <Eyebrow>
             <span className="uppercase tracking-[0.28em] text-[14px] text-black/55">
               How We Work
             </span>
           </Eyebrow>
 
-          <h2 className="font-[family-name:var(--font-cormorant)] mt-6 lg:mt-20 text-3xl font-normal text-[#2d3130] sm:text-4xl lg:text-[42px]">
+          <h2 className="font-(family-name:--font-cormorant) mt-6 lg:mt-20 text-3xl font-normal text-[#2d3130] sm:text-4xl lg:text-[42px]">
             We’re here to make a difference.
           </h2>
 
-          {/* Mobile Image */}
-          <div className="relative mt-8 aspect-[5/4] w-full overflow-hidden lg:hidden">
+          <div className="relative mt-8 aspect-5/4 w-full overflow-hidden lg:hidden">
             <Image
               src="https://picsum.photos/seed/cvfc-hero-1/800/1000"
               alt="Family holding hands on the beach at sunset"
@@ -40,7 +39,7 @@ export default function HowWeWork() {
                     once. It’s often hard for them to put themselves first.
                   </h3>
 
-                  <p className="mt-6 text-[14px] lg:text-[18px] leading-7 text-black/70">
+                  <p className="mt-6 text-[14px] leading-relaxed text-black/65 sm:text-[18px]">
                     Here, your needs are always top priority. Our team takes the
                     time to deeply listen to our clients in order to truly
                     understand their story and their struggles. We recognize
@@ -50,7 +49,7 @@ export default function HowWeWork() {
                 </div>
 
                 <div>
-                  <p className="text-[14px] lg:text-[18px] leading-7 text-black/70">
+                  <p className="text-[14px] leading-relaxed text-black/65 sm:text-[18px]">
                     Sometimes we may gently challenge you to look at things
                     differently and other times we may explore your emotions,
                     all while encouraging you to practice what you've learned in
@@ -73,8 +72,8 @@ export default function HowWeWork() {
               
             </div>
 
-            <div className="hidden lg:block lg:col-span-7 relative h-[560px]">
-              <div className="absolute -right-28 top-0 w-[430px] h-[560px] overflow-hidden">
+            <div className="hidden lg:block lg:col-span-7 relative h-140">
+              <div className="absolute -right-28 top-0 w-107.5 h-140 overflow-hidden">
                 <Image
                   src="https://picsum.photos/seed/cvfc-hero-1/800/1000"
                   alt="Family holding hands on the beach at sunset"

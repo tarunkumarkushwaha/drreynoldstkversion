@@ -25,14 +25,14 @@ export default function Hero() {
                 .
               </h1>
 
-              <p className="mt-8 max-w-lg text-[14px] font-normal leading-loose text-[#595e5c] sm:text-[15px] lg:text-[16px]">
+              <p className="mt-8 max-w-lg text-[14px] leading-relaxed text-black/65 sm:text-[18px]">
                 Specialized therapy for adults, couples, teens, and children to
                 reflect, heal, and grow.
               </p>
 
               <div className="mt-10 pb-4 ">
                 <Link
-                  href="/contact"
+                  href="/"
                   className="inline-block border-b border-[#2d3130] font-sans text-[11px] font-normal uppercase tracking-[0.25em] text-[#2d3130] transition-opacity hover:opacity-75"
                 >
                   BOOK AN APPOINTMENT

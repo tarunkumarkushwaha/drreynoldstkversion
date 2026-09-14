@@ -11,15 +11,17 @@ export default function Expertise() {
           fill
           priority
           sizes="100vw"
-          className="object-cover object-center brightness-[0.70]"
+          className="object-cover object-center"
           unoptimized
         />
 
-        <div className="absolute inset-0 flex items-center justify-center p-6 text-center sm:p-12">
-          <h2 className="max-w-3xl font-(family-name:--font-cormorant) text-2xl font-normal leading-[1.3] text-white sm:text-3xl lg:text-[40px] xl:text-[44px]">
+        <div className="absolute inset-0 bg-neutral-900/40 backdrop-blur-[2px]" />
+
+        <div className="absolute inset-0 flex items-center justify-start p-6 text-left sm:p-12 lg:px-24 xl:px-32">
+          <h2 className="max-w-xs sm:max-w-md md:max-w-xl lg:max-w-2xl font-(family-name:--font-cormorant) text-[26px] font-light leading-[1.1] text-white sm:text-3xl lg:text-[40px] xl:text-[44px]">
             You deserve a place where your story is heard, valued, and
             understood.{" "}
-            <em className="font-serif italic text-stone-100">
+            <em className="italic">
               Nothing will be too heavy for us to carry together.
             </em>
           </h2>

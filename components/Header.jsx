@@ -125,7 +125,7 @@ export default function Header() {
             ))}
           </DesktopDropdown>
 
-          <Link href="/faqs" className={navLinkClass}>
+          <Link href="/faq" className={navLinkClass}>
             FAQs
           </Link>
           <Link
@@ -199,7 +199,7 @@ export default function Header() {
               </button>
 
               <Link
-                href="/faqs"
+                href="/faq"
                 className={`${navLinkClassMOBILE} cursor-pointer text-left`}
                 onClick={handleCloseMobile}
               >

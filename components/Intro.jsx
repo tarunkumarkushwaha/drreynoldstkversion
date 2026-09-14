@@ -20,7 +20,7 @@ export default function Intro() {
                     A REALITY.
                   </p>
 
-                  <p className="mt-4 text-[16px] font-normal leading-[1.75] text-[#595e5c] sm:text-[15px]">
+                  <p className="mt-4 text-[14px] leading-relaxed text-black/65 sm:text-[18px]">
                     Whether you’re an adult seeking personal growth, looking to
                     work through your trauma, a couple working on your
                     relationship, or a parent looking for support for your
@@ -41,7 +41,7 @@ export default function Intro() {
                 </div>
 
                 <div>
-                  <p className="text-[14px] font-normal leading-[1.75] text-[#595e5c] sm:text-[15px]">
+                  <p className="text-[14px] leading-relaxed text-black/65 sm:text-[18px]">
                     First and foremost, we believe what you’re going through is
                     real, valid, and worthy of support. Our team offers clients
                     in the {siteInfo.city} area and across {siteInfo.state} an

@@ -42,7 +42,7 @@ export default function WhoWeHelp() {
                 )}
               </h3>
 
-              <p className="mt-3 text-[13px] font-normal leading-[1.7] text-[#595e5c] sm:text-[16px]">
+              <p className="mt-3 text-[14px] leading-relaxed text-black/65 sm:text-[18px]">
                 {item.copy}
               </p>
             </article>

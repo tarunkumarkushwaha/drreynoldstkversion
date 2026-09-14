@@ -22,7 +22,7 @@ export default function ScheduleCta() {
             <div className="mx-auto max-w-2xl md:mx-0 lg:max-w-3xl">
               <Eyebrow className="tracking-[0.3em]">SCHEDULE AN APPOINTMENT</Eyebrow>
 
-              <h2 className="mt-6 font-(family-name:--font-cormorant) text-3xl font-normal leading-[1.2] text-[#2d3130] sm:text-4xl lg:text-[44px] xl:text-[48px]">
+              <h2 className="mt-6 font-(family-name:--font-cormorant) font-normal leading-[1.2] text-[#2d3130] text-3xl sm:text-4xl lg:text-[44px] xl:text-[48px]">
                 Find a therapist who is the right fit for{" "}
                 <span className="inline-block font-(family-name:--font-kristi) text-5xl font-normal leading-[0.7] text-[#88a49e] tracking-widest sm:text-6xl">
                   you
@@ -30,7 +30,7 @@ export default function ScheduleCta() {
                 .
               </h2>
 
-              <div className="mt-6 space-y-4 text-[15px] font-normal leading-relaxed text-[#595e5c] sm:text-[15px] lg:text-[16px]">
+              <div className="mt-6 space-y-4 text-[14px] leading-relaxed text-black/65 sm:text-[18px]">
                 <p>
                   Coming to therapy is a courageous decision, and connecting
                   with the right kind of therapist makes all the difference. We

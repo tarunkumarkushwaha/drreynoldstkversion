@@ -1,44 +1,47 @@
 import Link from "next/link";
-import Image from "next/image";
 import Container from "./ui/Container";
 import { expertiseAreas } from "@/lib/data";
 
+const specialties = expertiseAreas;
+
 export default function Specialties() {
   return (
-    <section className="py-16 sm:py-20 lg:py-28">
+    <section className="bg-white py-16 sm:py-20 lg:py-28">
       <Container>
-        <div className="max-w-2xl">
-          <h2 className="font-serif text-3xl leading-tight text-stone-900 sm:text-4xl">
-            Honoring where you&rsquo;ve been and helping shape where you&rsquo;re headed.
-          </h2>
-          <h3 className="mt-4 text-lg text-stone-500">Our specialties include&hellip;</h3>
-        </div>
-
-        <div className="mt-12 grid grid-cols-1 gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
-          <div className="grid grid-cols-1 gap-x-10 gap-y-10 sm:grid-cols-2">
-            {expertiseAreas.map((area) => (
-              <div key={area.title}>
-                <h4 className="text-xl font-medium text-stone-900">{area.title}</h4>
-                <p className="mt-3 text-sm leading-relaxed text-stone-500 sm:text-base">{area.copy}</p>
-                <Link
-                  href={area.href}
-                  className="mt-3 inline-block text-sm font-semibold underline decoration-teal-300 decoration-2 underline-offset-4 hover:text-teal-700"
-                >
-                  Learn more
-                </Link>
-              </div>
-            ))}
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-16">
+          <div className="lg:col-span-4">
+            <h2 className="font-(family-name:--font-cormorant) mt-6 lg:mt-20 text-3xl font-normal text-[#2d3130] sm:text-4xl lg:text-[42px]">
+              Our{" "}
+              <span className="inline-block font-(family-name:--font-kristi) text-5xl font-light leading-[0.7] text-[#88a49e] tracking-widest sm:text-6xl">
+                specialties
+              </span>{" "}
+              include&hellip;
+            </h2>
           </div>
 
-          <div className="relative aspect-4/5 w-full overflow-hidden rounded-3xl lg:aspect-auto">
-            <Image
-              src="https://picsum.photos/seed/cvfc-specialties/700/900"
-              alt="Person walking along the shoreline"
-              fill
-              sizes="(min-width:1024px) 35vw, 90vw"
-              className="object-cover"
-              unoptimized
-            />
+          <div className="grid grid-cols-1 gap-x-12 gap-y-12 sm:grid-cols-2 lg:col-span-8">
+            {specialties.map((item) => (
+              <div key={item.title} className="flex flex-col justify-between">
+                <div>
+                  
+                  <h3 className="mt-6 font-(family-name:--font-cormorant) text-[24px] font-normal text-[#2d3130] sm:text-[28px]">
+                    {item.title}
+                  </h3>
+                  <p className="mt-4 text-[14px] leading-relaxed text-black/65 sm:text-[18px]">
+                    {item.copy}
+                  </p>
+                </div>
+
+                <div className="mt-6 pb-4 ">
+                  <Link
+                    href="/"
+                    className="inline-block border-b border-[#2d3130] font-sans text-[11px] font-normal uppercase tracking-[0.25em] text-[#2d3130] transition-opacity hover:opacity-75"
+                  >
+                    Learn More
+                  </Link>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </Container>

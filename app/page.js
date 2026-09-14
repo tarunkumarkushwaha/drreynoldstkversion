@@ -7,6 +7,7 @@ import HowWeWork from "@/components/HowWeWork";
 import Specialties from "@/components/Specialties";
 import ScheduleCta from "@/components/ScheduleCta";
 import Footer from "@/components/Footer";
+import HonoringSection from "@/components/HonoringSection";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
         <WhoWeHelp />
         <Expertise />
         <HowWeWork />
+        <HonoringSection/>
         <Specialties />
         <ScheduleCta />
       </main>
