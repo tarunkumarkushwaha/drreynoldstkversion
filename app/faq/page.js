@@ -1,3 +1,4 @@
+import Header from "@/components/Header";
 import Container from "@/components/ui/Container";
 import Eyebrow from "@/components/ui/Eyebrow";
 
@@ -41,54 +42,57 @@ const faqs = [
 
 export default function FAQPage() {
   return (
-    <main className="bg-[#D8CFBF] py-16 sm:py-20 lg:py-28 min-h-screen">
-      <Container>
-        <div className="max-w-295 mx-auto">
-          <Eyebrow>
-            <span className="uppercase tracking-[0.28em] text-[14px] text-black/55">
-              Questions & Answers
-            </span>
-          </Eyebrow>
+    <>
+      <Header />
+      <main className="min-h-screen overflow-hidden bg-[#EFE8D9] py-16 sm:py-20 lg:py-28">
+        <Container>
+          <div className="mx-auto max-w-5xl">
+            <Eyebrow>
+              <span className="text-[14px] uppercase tracking-[0.28em] text-black/55">
+                Questions &amp; Answers
+              </span>
+            </Eyebrow>
 
-          <h1 className="font-(family-name:--font-cormorant) mt-6 lg:mt-10 text-4xl font-normal text-[#2d3130] sm:text-5xl lg:text-[56px]">
-            Frequently Asked Questions
-          </h1>
+            <h1 className="font-(family-name:--font-cormorant) mt-6 text-4xl font-normal leading-tight text-[#2d3130] sm:text-5xl lg:mt-10 lg:text-[56px]">
+              Frequently Asked Questions
+            </h1>
 
-          <div className="mt-12 lg:mt-16 grid grid-cols-1 lg:grid-cols-20 gap-y-12 items-start">
-          
-            <div className="lg:col-span-7 lg:pr-10">
-              <h2 className="text-[12px] lg:text-[14px] font-medium uppercase tracking-[0.22em] leading-6 text-[#2B2B2B]">
-                Everything you need to know about getting started with us.
-              </h2>
-              <p className="mt-6 text-[14px] lg:text-[16px] leading-7 text-black/70">
-                If you have questions that are not answered here, please feel free to contact us directly. We are always happy to help.
-              </p>
+            <div className="mt-12 grid grid-cols-1 items-start gap-10 lg:mt-16 lg:grid-cols-12 lg:gap-16">
 
-              <div className="mt-10 h-px w-16 bg-black/35" />
-              <p className="mt-3 text-[10px] uppercase tracking-[0.24em] text-black/45">
-                Have a unique question?
-              </p>
-            </div>
+              <div className="lg:col-span-5">
+                <h2 className="text-[13px] font-medium uppercase leading-relaxed tracking-[0.22em] text-[#2d3130] sm:text-[14px]">
+                  Everything you need to know about getting started with us.
+                </h2>
+                <p className="mt-6 text-[14px] leading-relaxed text-black/70 sm:text-[16px]">
+                  If you have questions that are not answered here, please feel
+                  free to contact us directly. We are always happy to help.
+                </p>
 
-            {/* Accordion/FAQ List Right */}
-            <div className="lg:col-span-13 space-y-8">
-              {faqs.map((faq, index) => (
-                <div
-                  key={index}
-                  className="border-b border-black/20 pb-8 last:border-none"
-                >
-                  <h3 className="text-[16px] lg:text-[18px] font-medium uppercase tracking-[0.15em] text-[#2B2B2B] mb-4">
-                    {faq.question}
-                  </h3>
-                  <p className="text-[14px] lg:text-[16px] leading-7 text-black/70">
-                    {faq.answer}
-                  </p>
-                </div>
-              ))}
+                <div className="mt-8 h-px w-20 bg-black/35 lg:mt-12" />
+                <p className="mt-3 text-[10px] uppercase tracking-[0.24em] text-black/45">
+                  Have a unique question?
+                </p>
+              </div>
+
+              <div className="space-y-8 lg:col-span-7">
+                {faqs.map((faq, index) => (
+                  <div
+                    key={index}
+                    className="border-b border-black/20 pb-8 last:border-none last:pb-0"
+                  >
+                    <h3 className="mb-3 text-base font-medium uppercase tracking-[0.15em] text-[#2d3130] sm:text-lg">
+                      {faq.question}
+                    </h3>
+                    <p className="text-[14px] leading-relaxed text-black/70 sm:text-[16px]">
+                      {faq.answer}
+                    </p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
-        </div>
-      </Container>
-    </main>
+        </Container>
+      </main>
+    </>
   );
 }

@@ -3,6 +3,7 @@ import Link from "next/link";
 import Container from "@/components/ui/Container";
 import Eyebrow from "@/components/ui/Eyebrow";
 import { siteInfo } from "@/lib/data";
+import Header from "@/components/Header";
 
 export const metadata = {
   title:
@@ -95,49 +96,51 @@ const jsonLd = {
 
 export default function AboutPage() {
   return (
-    <main className="min-h-screen overflow-hidden bg-[#EFE8D9] py-16 sm:py-20 lg:py-28">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
+    <>
+      <Header />
+      <main className="min-h-screen overflow-hidden bg-[#EFE8D9] py-16 sm:py-20 lg:py-28">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
 
-      <Container>
-        <div className="mx-auto max-w-5xl">
-          <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-12 lg:gap-16">
-   
-            <div className="lg:col-span-7">
-              <Eyebrow>
-                <span className="text-[14px] uppercase tracking-[0.28em] text-black/55">
-                  About Dr. Maya Reynolds, PsyD
-                </span>
-              </Eyebrow>
+        <Container>
+          <div className="mx-auto max-w-5xl">
+            <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-12 lg:gap-16">
+              <div className="lg:col-span-7">
+                <Eyebrow>
+                  <span className="text-[14px] uppercase tracking-[0.28em] text-black/55">
+                    About Dr. Maya Reynolds, PsyD
+                  </span>
+                </Eyebrow>
 
-              <h1 className="font-(family-name:--font-cormorant) mt-6 text-3xl font-normal leading-tight text-[#2d3130] sm:text-5xl lg:text-[52px]">
-                A licensed clinical psychologist dedicated to helping you find calm,
-                resilience, and a stronger sense of self.
-              </h1>
+                <h1 className="font-(family-name:--font-cormorant) mt-6 text-3xl font-normal leading-tight text-[#2d3130] sm:text-5xl lg:text-[52px]">
+                  A licensed clinical psychologist dedicated to helping you find
+                  calm, resilience, and a stronger sense of self.
+                </h1>
 
-              <p className="mt-6 text-[15px] leading-relaxed text-black/70 sm:text-[18px]">
-                Providing warm, evidence-based therapy in Santa Monica and online across California.
-              </p>
-            </div>
+                <p className="mt-6 text-[15px] leading-relaxed text-black/70 sm:text-[18px]">
+                  Providing warm, evidence-based therapy in Santa Monica and
+                  online across California.
+                </p>
+              </div>
 
-   
-            <div className="lg:col-span-5">
-              <div className="relative mx-auto aspect-2/3 w-full max-w-95 overflow-hidden rounded-2xl sm:rounded-3xl shadow-sm lg:max-w-none">
-                <Image
-                  src="/images/DrMaya.png"
-                  alt="Dr. Maya Reynolds, Licensed Clinical Psychologist"
-                  fill
-                  priority
-                  sizes="(min-width: 1024px) 35vw, (min-width: 640px) 380px, 100vw"
-                  className="object-cover object-top"
-                />
+              <div className="lg:col-span-5">
+                <div className="relative mx-auto aspect-2/3 w-full max-w-95 overflow-hidden rounded-2xl sm:rounded-3xl shadow-sm lg:max-w-none">
+                  <Image
+                    src="/images/DrMaya.png"
+                    alt="Dr. Maya Reynolds, Licensed Clinical Psychologist"
+                    fill
+                    priority
+                    sizes="(min-width: 1024px) 35vw, (min-width: 640px) 380px, 100vw"
+                    className="object-cover object-top"
+                  />
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </Container>
-    </main>
+        </Container>
+      </main>
+    </>
   );
 }
