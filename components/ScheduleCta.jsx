@@ -20,10 +20,12 @@ export default function ScheduleCta() {
 
           <div className="order-2 flex-1 px-5 py-10 sm:px-10 md:px-8 md:py-6 lg:px-12 xl:px-20">
             <div className="mx-auto max-w-2xl md:mx-0 lg:max-w-3xl">
-              <Eyebrow className="tracking-[0.3em]">SCHEDULE AN APPOINTMENT</Eyebrow>
+              <Eyebrow className="tracking-[0.3em]">
+                BOOK A THERAPY CONSULTATION
+              </Eyebrow>
 
               <h2 className="mt-6 font-(family-name:--font-cormorant) font-normal leading-[1.2] text-[#2d3130] text-3xl sm:text-4xl lg:text-[44px] xl:text-[48px]">
-                Find a therapist who is the right fit for{" "}
+                Work with a licensed psychologist who understands{" "}
                 <span className="inline-block font-(family-name:--font-kristi) text-5xl font-normal leading-[0.7] text-[#88a49e] tracking-widest sm:text-6xl">
                   you
                 </span>
@@ -32,16 +34,16 @@ export default function ScheduleCta() {
 
               <div className="mt-6 space-y-4 text-[14px] leading-relaxed text-black/65 sm:text-[18px]">
                 <p>
-                  Coming to therapy is a courageous decision, and connecting
-                  with the right kind of therapist makes all the difference. We
-                  understand that your journey is personal, and we&apos;re here
-                  to support you with care and understanding every step of the
-                  way. Each member of our team brings dedicated expertise and a
-                  commitment to support you in your struggles. We want you to
-                  feel prioritized, understood, and empowered.
+                  Starting therapy takes courage, and finding the right
+                  psychologist makes all the difference. As a licensed clinical
+                  psychologist based in Santa Monica, I bring evidence-based
+                  training in CBT, EMDR, and mindfulness-based care to help you
+                  work through anxiety, trauma, and burnout at a pace that feels
+                  safe. My goal is for you to feel heard, understood, and
+                  equipped with real tools for change.
                 </p>
                 <p className="pt-1">
-                  Click the button below to schedule an appointment.
+                  Click the button below to schedule a consultation.
                 </p>
               </div>
 

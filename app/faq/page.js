@@ -3,24 +3,39 @@ import Eyebrow from "@/components/ui/Eyebrow";
 
 const faqs = [
   {
-    question: "What can I expect during our first therapy session?",
+    question: "What can I expect during our first session together?",
     answer:
-      "Our initial consultation is designed to help us get to know each other. We will discuss your goals, current challenges, and background to create an intentional, personalized plan moving forward.",
+      "Our first session is really about getting to know each other. I'll ask about what's bringing you to therapy, your history, and what you're hoping will feel different, so we can build a personalized approach to your anxiety, trauma, or burnout from there.",
   },
   {
     question: "Do you offer virtual or in-person sessions?",
     answer:
-      "We offer both in-person sessions at our office space and secure telehealth appointments for clients looking for flexible remote care.",
+      "Both. I see clients in person at my Santa Monica office and offer secure telehealth sessions for anyone located elsewhere in California.",
   },
   {
     question: "How long does a typical therapy session last?",
     answer:
-      "Standard individual sessions last 50 minutes. Couples and family sessions may be scheduled for 60 to 75 minutes depending on your tailored treatment plan.",
+      "Individual sessions are 50 minutes. Some clients doing deeper trauma or EMDR work may benefit from occasional 75-minute sessions, which we can discuss as part of your treatment plan.",
+  },
+  {
+    question: "What issues do you specialize in?",
+    answer:
+      "I work primarily with adults experiencing anxiety, panic, trauma, and burnout—including high-achieving professionals, entrepreneurs, and creatives who feel exhausted, stuck in overthinking, or disconnected from themselves after years of pushing through stress.",
+  },
+  {
+    question: "What is EMDR, and is it right for me?",
+    answer:
+      "EMDR (Eye Movement Desensitization and Reprocessing) is an evidence-based method that helps the brain reprocess painful memories so they carry less emotional charge. It's often a good fit for single-incident trauma as well as more complex, long-standing patterns, and we'd discuss together whether it makes sense for your goals.",
+  },
+  {
+    question: "Do you accept insurance?",
+    answer:
+      "I currently operate as an out-of-network provider. Upon request, I can provide a superbill that you can submit to your insurance carrier for possible reimbursement, depending on your out-of-network benefits.",
   },
   {
     question: "What is your cancellation policy?",
     answer:
-      "We ask for at least 24 hours notice for any cancellations or rescheduling requests to avoid being charged the full session fee.",
+      "I ask for at least 24 hours' notice for any cancellations or rescheduling requests. Sessions cancelled with less notice are subject to the full session fee.",
   },
 ];
 
@@ -40,7 +55,7 @@ export default function FAQPage() {
           </h1>
 
           <div className="mt-12 lg:mt-16 grid grid-cols-1 lg:grid-cols-20 gap-y-12 items-start">
-            {/* Intro Text Left */}
+          
             <div className="lg:col-span-7 lg:pr-10">
               <h2 className="text-[12px] lg:text-[14px] font-medium uppercase tracking-[0.22em] leading-6 text-[#2B2B2B]">
                 Everything you need to know about getting started with us.

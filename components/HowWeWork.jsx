@@ -10,12 +10,12 @@ export default function HowWeWork() {
         <div className="max-w-295 mx-auto">
           <Eyebrow>
             <span className="uppercase tracking-[0.28em] text-[14px] text-black/55">
-              How We Work
+              How Therapy Works
             </span>
           </Eyebrow>
 
           <h2 className="font-(family-name:--font-cormorant) mt-6 lg:mt-20 text-3xl font-normal text-[#2d3130] sm:text-4xl lg:text-[42px]">
-            We’re here to make a difference.
+            A collaborative approach to anxiety, trauma, and burnout.
           </h2>
 
           <div className="relative mt-8 aspect-5/4 w-full overflow-hidden lg:hidden">
@@ -35,27 +35,29 @@ export default function HowWeWork() {
               <div className="grid gap-6 lg:gap-8 lg:grid-cols-2">
                 <div>
                   <h3 className="text-[11px] lg:text-[14px] font-medium uppercase tracking-[0.2em] lg:tracking-[0.22em] leading-5 text-[#2B2B2B]">
-                    The clients we work with are balancing so many things at
-                    once. It’s often hard for them to put themselves first.
+                    Many of my clients are high-achieving and self-aware, yet
+                    feel exhausted, on edge, or stuck in overthinking.
                   </h3>
 
                   <p className="mt-6 text-[14px] leading-relaxed text-black/65 sm:text-[18px]">
-                    Here, your needs are always top priority. Our team takes the
-                    time to deeply listen to our clients in order to truly
-                    understand their story and their struggles. We recognize
-                    that no two people are the same and that personalized
-                    therapy means an intentional, tailored approach.
+                    Your needs always come first. As a licensed clinical
+                    psychologist, I take the time to deeply understand your
+                    story and what's keeping you stuck, using evidence-based
+                    methods like CBT, EMDR, and mindfulness-based practices.
+                    Every client is different, so therapy is never
+                    one-size-fits-all.
                   </p>
                 </div>
 
                 <div>
                   <p className="text-[14px] leading-relaxed text-black/65 sm:text-[18px]">
-                    Sometimes we may gently challenge you to look at things
-                    differently and other times we may explore your emotions,
-                    all while encouraging you to practice what you've learned in
-                    your daily life. We take what we do seriously because
-                    healing, meaningful relationships, and a fulfilling life all
-                    matter.
+                    Sessions are structured enough to feel supportive, while
+                    leaving room for reflection and depth. Some days we'll
+                    gently challenge old patterns; others we'll focus on
+                    regulating your nervous system and building tools you can
+                    use in daily life. I take this work seriously, because
+                    healing, resilience, and a stronger relationship with
+                    yourself all matter.
                   </p>
                 </div>
               </div>
@@ -68,8 +70,6 @@ export default function HowWeWork() {
                   Learn More About Us
                 </Link>
               </div>
-
-              
             </div>
 
             <div className="hidden lg:block lg:col-span-7 relative h-140">

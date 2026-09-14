@@ -1,28 +1,27 @@
 import Link from "next/link";
-import { siteInfo, footerNav, legalNav, team } from "@/lib/data";
+import { siteInfo, footerNav, legalNav, services } from "@/lib/data";
 
 export default function Footer() {
   return (
     <footer className="bg-white pt-16 text-[#4a5254]">
       <div className="mx-auto max-w-7xl px-6 lg:px-12">
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-12">
-
           <div className="lg:col-span-5">
             <Link
               href="/"
               className="font-(family-name:--font-cormorant) text-4xl font-normal text-[#2a2e2d] antialiased sm:text-5xl"
             >
-              Conejo Valley
-              <span className="mt-1 block font-sans text-[16px] font-normal uppercase tracking-[0.4em] text-[#8aa3a8]">
-                Family Counseling
+              Dr. Maya Reynolds
+              <span className="mt-4 block font-sans text-[16px] font-normal uppercase tracking-[0.4em] text-[#8aa3a8]">
+                Clinical Psychologist
               </span>
             </Link>
 
             <p className="mt-6 max-w-md text-[18px] w-[60%] leading-relaxed text-[#596366]">
-              We want to make getting started simple. You're welcome to come
-              into our office in {siteInfo.city} or schedule virtual
-              appointments from anywhere in {siteInfo.state}—whatever works best
-              for you.
+              Getting started is simple. You're welcome to visit my office in{" "}
+              {siteInfo.city} for in-person sessions, or schedule secure
+              telehealth appointments from anywhere in {siteInfo.state}
+              —whatever works best for you.
             </p>
           </div>
 
@@ -46,10 +45,10 @@ export default function Footer() {
 
           <div className="lg:col-span-2">
             <h4 className="text-sm font-semibold uppercase tracking-[0.2em] text-[#596366]">
-              Our Team
+              Our Services
             </h4>
             <ul className="mt-4 space-y-1 text-[16px]">
-              {team.map((person) => (
+              {services.map((person) => (
                 <li key={person.slug}>
                   <Link
                     href={`/${person.slug}`}
@@ -98,7 +97,7 @@ export default function Footer() {
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-6 sm:flex-row lg:px-12">
           <div className="flex flex-wrap items-center justify-center gap-x-2">
             {legalNav.map((item, i) => (
-              <span key={item.href} className="flex items-center gap-2">
+              <span key={item.label} className="flex items-center gap-2">
                 <Link href={item.href} className="hover:underline">
                   {item.label}
                 </Link>
@@ -106,7 +105,7 @@ export default function Footer() {
               </span>
             ))}
             {legalNav.length > 0 && <span>|</span>}
-            <span>Website by Walker Strategy Co.</span>
+            <span title="contact me">Website by Tarun</span>
           </div>
 
           <p className="text-white/90">

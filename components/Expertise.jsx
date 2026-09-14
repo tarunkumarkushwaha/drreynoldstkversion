@@ -19,10 +19,10 @@ export default function Expertise() {
 
         <div className="absolute inset-0 flex items-center justify-start p-6 text-left sm:p-12 lg:px-24 xl:px-32">
           <h2 className="max-w-xs sm:max-w-md md:max-w-xl lg:max-w-2xl font-(family-name:--font-cormorant) text-[26px] font-light leading-[1.1] text-white sm:text-3xl lg:text-[40px] xl:text-[44px]">
-            You deserve a place where your story is heard, valued, and
-            understood.{" "}
+            You deserve a therapist who truly listens to your anxiety, trauma,
+            and burnout.{" "}
             <em className="italic">
-              Nothing will be too heavy for us to carry together.
+              Nothing will be too heavy for us to work through together.
             </em>
           </h2>
         </div>

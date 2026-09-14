@@ -19,11 +19,11 @@ export default function HonoringSection() {
 
           <div className="flex flex-col justify-center px-2 sm:px-6 md:px-4">
             <h2 className="font-(family-name:--font-cormorant) mt-6 lg:mt-20 text-3xl font-normal text-[#2d3130] sm:text-4xl lg:text-[42px]">
-              Honoring where you’ve been{" "}
+              Healing from anxiety and trauma{" "}
               <span className="inline-block tracking-widest font-(family-name:--font-kristi) text-5xl font-normal leading-none text-[#7c9d96] sm:text-6xl lg:text-[70px]">
                 &amp;
               </span>{" "}
-              helping shape where you’re headed.
+              building a life that feels sustainable.
             </h2>
           </div>
         </div>

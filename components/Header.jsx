@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Container from "./ui/Container";
-import { team, specialtiesNav, methodsNav } from "@/lib/data";
+import {  specialtiesNav, methodsNav } from "@/lib/data";
 
 const navLinkClass =
   "font-sans text-xs font-normal uppercase tracking-[0.22em] text-stone-700 transition-colors hover:text-teal-700";
@@ -60,9 +60,9 @@ export default function Header() {
           className="font-(family-name:--font-cormorant) text-4xl font-normal text-[#2d3130] antialiased sm:text-[42px]"
           onClick={handleCloseMobile}
         >
-          Conejo Valley
-          <span className="block font-sans text-sm font-normal uppercase tracking-[0.28em] text-[#86a7a7] sm:mt-1 sm:text-xs sm:tracking-[0.56em]">
-            Family Counseling
+          Dr. Maya Reynolds
+          <span className="block mt-2 font-sans text-sm font-normal uppercase tracking-[0.28em] text-[#86a7a7] sm:mt-1 sm:text-xs sm:tracking-[0.56em]">
+            Clinical Psychologist
           </span>
         </Link>
 
@@ -71,7 +71,7 @@ export default function Header() {
             About
           </Link>
 
-          <DesktopDropdown
+          {/* <DesktopDropdown
             label="Our Team"
             isOpen={openDropdown === "team"}
             onEnter={() => setOpenDropdown("team")}
@@ -87,7 +87,7 @@ export default function Header() {
                 </Link>
               </li>
             ))}
-          </DesktopDropdown>
+          </DesktopDropdown> */}
 
           <DesktopDropdown
             label="Specialties"
@@ -174,13 +174,13 @@ export default function Header() {
                 About
               </Link>
 
-              <button
+              {/* <button
                 className={`${navLinkClassMOBILE} flex items-center cursor-pointer text-left`}
                 onClick={() => setActiveSubMenu("team")}
               >
                 <span>Our Team</span>
                 <span className="text-stone-400 ml-5 mb-2 text-5xl">›</span>
-              </button>
+              </button> */}
 
               <button
                 className={`${navLinkClassMOBILE} flex items-center cursor-pointer text-left`}
@@ -240,7 +240,7 @@ export default function Header() {
             </button>
 
             <div className="mt-8 space-y-6">
-              {activeSubMenu === "team" &&
+              {/* {activeSubMenu === "team" &&
                 team.map((person) => (
                   <Link
                     key={person.slug}
@@ -250,7 +250,7 @@ export default function Header() {
                   >
                     {person.name}, {person.title}
                   </Link>
-                ))}
+                ))} */}
 
               {activeSubMenu === "specialties" &&
                 specialtiesNav.map((item) => (
