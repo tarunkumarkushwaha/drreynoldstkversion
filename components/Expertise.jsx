@@ -33,7 +33,7 @@ export default function Expertise() {
           <div className="lg:col-span-4">
             <h3 className="font-(family-name:--font-cormorant) text-3xl font-normal text-[#2d3130] sm:text-4xl lg:text-[42px]">
               Our areas of{" "}
-              <span className="inline-block tracking-widest font-(family-name:--font-kristi) text-4xl font-normal text-[#7c9d96] sm:text-5xl lg:text-[58px]">
+              <span className="inline-block tracking-widest font-(family-name:--font-kristi) text-4xl font-normal text-[#A67B5B] sm:text-5xl lg:text-[58px]">
                 expertise
               </span>
             </h3>

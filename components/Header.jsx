@@ -6,9 +6,9 @@ import Container from "./ui/Container";
 import {  specialtiesNav, methodsNav } from "@/lib/data";
 
 const navLinkClass =
-  "font-sans text-xs font-normal uppercase tracking-[0.22em] text-stone-700 transition-colors hover:text-teal-700";
+  "font-sans text-xs font-normal uppercase tracking-[0.22em] text-stone-700 transition-colors hover:text-[#A67B5B]";
 const navLinkClassMOBILE =
-  "font-sans text-3xl ml-5 font-normal uppercase tracking-[0.22em] text-stone-700 transition-colors hover:text-teal-700";
+  "font-sans text-3xl ml-5 font-normal uppercase tracking-[0.22em] text-stone-700 transition-colors hover:text-[#A67B5B]";
 
 function DesktopDropdown({ label, isOpen, onEnter, onLeave, children }) {
   return (
@@ -61,7 +61,7 @@ export default function Header() {
           onClick={handleCloseMobile}
         >
           Dr. Maya Reynolds
-          <span className="block mt-2 font-sans text-sm font-normal uppercase tracking-[0.28em] text-[#86a7a7] sm:mt-1 sm:text-xs sm:tracking-[0.56em]">
+          <span className="block mt-2 font-sans text-sm font-normal uppercase tracking-[0.28em] text-[#A67B5B] sm:mt-1 sm:text-xs sm:tracking-[0.56em]">
             Clinical Psychologist
           </span>
         </Link>
@@ -69,6 +69,9 @@ export default function Header() {
         <nav className="hidden items-center gap-8 lg:flex">
           <Link href="/about" className={navLinkClass}>
             About
+          </Link>
+          <Link href="/ouroffice" className={navLinkClass}>
+            Office
           </Link>
 
           {/* <DesktopDropdown
@@ -81,7 +84,7 @@ export default function Header() {
               <li key={person.slug}>
                 <Link
                   href={`/${person.slug}`}
-                  className="block rounded-lg px-3 py-2 text-sm text-stone-700 hover:bg-stone-100 hover:text-teal-700"
+                  className="block rounded-lg px-3 py-2 text-sm text-stone-700 hover:bg-stone-100 hover:text-[#86a7a7]"
                 >
                   {person.name}, {person.title}
                 </Link>
@@ -99,7 +102,7 @@ export default function Header() {
               <li key={item.slug}>
                 <Link
                   href={`/${item.slug}`}
-                  className="block rounded-lg px-3 py-2 text-sm text-stone-700 hover:bg-stone-100 hover:text-teal-700"
+                  className="block rounded-lg px-3 py-2 text-sm text-stone-700 hover:bg-stone-100 hover:text-[#86a7a7]"
                 >
                   {item.label}
                 </Link>
@@ -117,7 +120,7 @@ export default function Header() {
               <li key={item.slug}>
                 <Link
                   href={`/${item.slug}`}
-                  className="block rounded-lg px-3 py-2 text-sm text-stone-700 hover:bg-stone-100 hover:text-teal-700"
+                  className="block rounded-lg px-3 py-2 text-sm text-stone-700 hover:bg-stone-100 hover:text-[#86a7a7]"
                 >
                   {item.label}
                 </Link>
@@ -130,7 +133,7 @@ export default function Header() {
           </Link>
           <Link
             href="/contact"
-            className="inline-flex items-center justify-center rounded-[50%] border border-stone-700 bg-white px-6 py-4 font-sans text-xs font-normal uppercase tracking-[0.22em] text-stone-700 transition-colors hover:bg-black hover:text-stone-100"
+            className="inline-flex items-center justify-center rounded-[50%] border border-stone-700 bg-white px-6 py-4 font-sans text-xs font-normal uppercase tracking-[0.22em] text-stone-700 transition-colors hover:bg-[#A67B5B] hover:text-stone-100"
           >
             Contact
           </Link>
@@ -172,6 +175,13 @@ export default function Header() {
                 onClick={handleCloseMobile}
               >
                 About
+              </Link>
+              <Link
+                href="/ouroffice"
+                className={`${navLinkClassMOBILE} cursor-pointer text-left`}
+                onClick={handleCloseMobile}
+              >
+                Office
               </Link>
 
               {/* <button
@@ -225,7 +235,7 @@ export default function Header() {
           >
             <button
               onClick={() => setActiveSubMenu(null)}
-              className="flex items-center cursor-pointer gap-2 font-sans text-base font-light uppercase tracking-[0.15em] text-[#86a7a7] hover:text-stone-900"
+              className="flex items-center cursor-pointer gap-2 font-sans text-base font-light uppercase tracking-[0.15em] text-[#A67B5B] hover:text-stone-900"
             >
               <svg
                 className="h-4 w-4"
@@ -245,7 +255,7 @@ export default function Header() {
                   <Link
                     key={person.slug}
                     href={`/${person.slug}`}
-                    className="block font-sans text-base font-normal uppercase tracking-[0.12em] text-[#2d3130] transition-colors hover:text-teal-700 sm:text-lg"
+                    className="block font-sans text-base font-normal uppercase tracking-[0.12em] text-[#2d3130] transition-colors hover:text-[#86a7a7] sm:text-lg"
                     onClick={handleCloseMobile}
                   >
                     {person.name}, {person.title}
@@ -257,7 +267,7 @@ export default function Header() {
                   <Link
                     key={item.slug}
                     href={`/${item.slug}`}
-                    className="block font-sans text-base font-normal uppercase tracking-[0.12em] text-[#2d3130] transition-colors hover:text-teal-700 sm:text-lg"
+                    className="block font-sans text-base font-normal uppercase tracking-[0.12em] text-[#2d3130] transition-colors hover:text-[#86a7a7] sm:text-lg"
                     onClick={handleCloseMobile}
                   >
                     {item.label}
@@ -269,7 +279,7 @@ export default function Header() {
                   <Link
                     key={item.slug}
                     href={`/${item.slug}`}
-                    className="block font-sans text-base font-normal uppercase tracking-[0.12em] text-[#2d3130] transition-colors hover:text-teal-700 sm:text-lg"
+                    className="block font-sans text-base font-normal uppercase tracking-[0.12em] text-[#2d3130] transition-colors hover:text-[#86a7a7] sm:text-lg"
                     onClick={handleCloseMobile}
                   >
                     {item.label}

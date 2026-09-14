@@ -12,7 +12,7 @@ export default function Specialties() {
           <div className="lg:col-span-4">
             <h2 className="font-(family-name:--font-cormorant) mt-6 lg:mt-20 text-3xl font-normal text-[#2d3130] sm:text-4xl lg:text-[42px]">
               Our{" "}
-              <span className="inline-block font-(family-name:--font-kristi) text-5xl font-light leading-[0.7] text-[#88a49e] tracking-widest sm:text-6xl">
+              <span className="inline-block font-(family-name:--font-kristi) text-5xl font-light leading-[0.7] text-[#A67B5B] tracking-widest sm:text-6xl">
                 specialties
               </span>{" "}
               include&hellip;

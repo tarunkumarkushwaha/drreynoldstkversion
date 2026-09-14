@@ -63,11 +63,11 @@ export default function ContactPage() {
                     Direct Contact
                   </span>
                   <p className="text-[16px] leading-6 text-black/80">
-                    <a href={`mailto:${siteInfo.email}`} className="hover:text-black">
+                    <a href={`mailto:${siteInfo.email}`} className="hover:text-[#86a7a7]">
                       {siteInfo.email}
                     </a>
                     <br />
-                    <a href={`tel:${siteInfo.phone.replace(/\D/g, "")}`} className="hover:text-black">
+                    <a href={`tel:${siteInfo.phone.replace(/\D/g, "")}`} className="hover:text-[#86a7a7]">
                       {siteInfo.phone}
                     </a>
                   </p>

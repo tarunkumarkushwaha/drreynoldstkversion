@@ -16,7 +16,7 @@ export default function Hero() {
 
               <h1 className="mt-8 font-(family-name:--font-cormorant) text-[44px] sm:text-5xl lg:text-[46px] xl:text-[54px] font-normal leading-[1.18] text-[#2d3130]">
                 Find relief from anxiety, trauma, and burnout — and feel like{" "}
-                <span className="inline-block font-(family-name:--font-kristi) text-5xl font-normal leading-[0.7] text-[#7c9d96] tracking-wide sm:text-6xl lg:text-[72px]">
+                <span className="inline-block font-(family-name:--font-kristi) text-5xl font-normal leading-[0.7] text-[#A67B5B] tracking-wide sm:text-6xl lg:text-[72px]">
                   yourself
                 </span>{" "}
                 again.
@@ -43,13 +43,12 @@ export default function Hero() {
           <div className="order-2 mt-8 flex w-full flex-row items-end gap-3 px-6 md:contents md:m-0 md:p-0">
             <div className="order-1 md:order-1 relative aspect-3/4 w-[70%] shrink-0 overflow-hidden sm:h-120 md:h-auto md:w-[38%] lg:w-[35%]">
               <Image
-                src="https://picsum.photos/seed/cvfc-hero-1/800/1000"
+                src="/images/happywoman.jpg"
                 alt="Family walking on the beach"
                 fill
                 priority
                 sizes="(min-width: 768px) 40vw, 70vw"
                 className="object-cover object-center"
-                unoptimized
               />
             </div>
 

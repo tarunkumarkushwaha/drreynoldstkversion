@@ -7,7 +7,7 @@ export default function HonoringSection() {
         <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-2 lg:gap-16">
           <div className="relative aspect-4/3 w-full overflow-hidden rounded-sm shadow-sm">
             <Image
-              src="https://picsum.photos/seed/family-beach/1200/900"
+              src="/images/heal.jpg"
               alt="Family holding hands on the beach facing the ocean"
               fill
               sizes="(min-width: 768px) 50vw, 100vw"
@@ -20,7 +20,7 @@ export default function HonoringSection() {
           <div className="flex flex-col justify-center px-2 sm:px-6 md:px-4">
             <h2 className="font-(family-name:--font-cormorant) mt-6 lg:mt-20 text-3xl font-normal text-[#2d3130] sm:text-4xl lg:text-[42px]">
               Healing from anxiety and trauma{" "}
-              <span className="inline-block tracking-widest font-(family-name:--font-kristi) text-5xl font-normal leading-none text-[#7c9d96] sm:text-6xl lg:text-[70px]">
+              <span className="inline-block tracking-widest font-(family-name:--font-kristi) text-5xl font-normal leading-none text-[#A67B5B] sm:text-6xl lg:text-[70px]">
                 &amp;
               </span>{" "}
               building a life that feels sustainable.

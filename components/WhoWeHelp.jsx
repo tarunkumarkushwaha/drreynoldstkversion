@@ -10,7 +10,7 @@ export default function WhoWeHelp() {
     <section className="bg-[#f7f6f2] py-12 sm:py-16 lg:py-24">
       <h2 className="text-left ml-10 md:ml-16 font-(family-name:--font-cormorant) text-4xl font-normal text-[#2d3130] sm:text-5xl lg:text-[56px]">
         Who we{" "}
-        <span className="inline-block tracking-widest font-(family-name:--font-kristi) text-5xl font-normal leading-none text-[#7c9d96] sm:text-6xl lg:text-[70px]">
+        <span className="inline-block tracking-widest font-(family-name:--font-kristi) text-5xl font-normal leading-none text-[#A67B5B] sm:text-6xl lg:text-[70px]">
           help
         </span>
       </h2>

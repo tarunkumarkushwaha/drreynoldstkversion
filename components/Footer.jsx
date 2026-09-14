@@ -12,7 +12,7 @@ export default function Footer() {
               className="font-(family-name:--font-cormorant) text-4xl font-normal text-[#2a2e2d] antialiased sm:text-5xl"
             >
               Dr. Maya Reynolds
-              <span className="mt-4 block font-sans text-[16px] font-normal uppercase tracking-[0.4em] text-[#8aa3a8]">
+              <span className="mt-4 block font-sans text-[16px] font-normal uppercase tracking-[0.4em] text-[#A67B5B]">
                 Clinical Psychologist
               </span>
             </Link>
@@ -93,7 +93,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="mt-16 bg-[#86b3b3] py-2 text-[16px] text-white">
+      <div className="mt-16 bg-[#A67B5B] py-2 text-[16px] text-white">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-6 sm:flex-row lg:px-12">
           <div className="flex flex-wrap items-center justify-center gap-x-2">
             {legalNav.map((item, i) => (

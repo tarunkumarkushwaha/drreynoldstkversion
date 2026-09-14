@@ -26,7 +26,7 @@ export default function ScheduleCta() {
 
               <h2 className="mt-6 font-(family-name:--font-cormorant) font-normal leading-[1.2] text-[#2d3130] text-3xl sm:text-4xl lg:text-[44px] xl:text-[48px]">
                 Work with a licensed psychologist who understands{" "}
-                <span className="inline-block font-(family-name:--font-kristi) text-5xl font-normal leading-[0.7] text-[#88a49e] tracking-widest sm:text-6xl">
+                <span className="inline-block font-(family-name:--font-kristi) text-5xl font-normal leading-[0.7] text-[#A67B5B] tracking-widest sm:text-6xl">
                   you
                 </span>
                 .
@@ -50,7 +50,7 @@ export default function ScheduleCta() {
               <div className="mt-8">
                 <Link
                   href="/contact"
-                  className="inline-flex h-11 items-center justify-center rounded-[50%] border border-[#2d3130] bg-transparent px-8 font-sans text-[11px] font-normal uppercase tracking-[0.25em] text-[#2d3130] transition-colors hover:bg-[#2d3130] hover:text-white"
+                  className="inline-flex h-11 items-center justify-center rounded-[50%] border border-[#2d3130] bg-transparent px-8 font-sans text-[11px] font-normal uppercase tracking-[0.25em] text-[#2d3130] transition-colors hover:bg-[#A67B5B] hover:text-white"
                 >
                   BOOK NOW
                 </Link>
@@ -61,7 +61,7 @@ export default function ScheduleCta() {
           <div className="order-3 relative h-80 w-full md:w-[32%] shrink-0 sm:h-96 md:h-100 lg:h-112.5 xl:h-140">
             <div className="absolute top-0 right-0 bottom-0 h-full w-[80%] md:w-full text-transparent">
               <Image
-                src="https://picsum.photos/seed/cvfc-schedule/1000/1000"
+                src="https://picsum.photos/id/1050/1000/1000"
                 alt="Parent and child looking for shells on the beach"
                 fill
                 sizes="(min-width: 768px) 42vw, 100vw"
